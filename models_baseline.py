@@ -34,7 +34,8 @@ class Transfuser(nn.Module):
         'cat' performs concetentation.
     - conv1s: bool, (epxerimental), to use 1 x 1 conv to increase/decrease feature map channels for transformer. Default False
     
-    * Architecture inspired by https://ap229997.github.io/projects/transfuser/
+    * Architecture inspired by https://ap229997.github.io/projects/transfuser/ of 
+    'Multi-Modal Fusion Transformer for End-to-End Autonomous Driving' paper.
     '''
     def __init__(self,n_classes=None, n_layers=[8,8,8,8], n_head=[4,4,4,4], fexpansion=4, emb_pdrop=0.1, attn_pdrop=0.1, 
                  mlp_pdrop=0.1, classifier_pdrop=0.1, pretrained=True, cnns=['resnet34','resnet34'], ratio=1.0, fusion='sum', conv1d=False):
