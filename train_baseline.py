@@ -472,7 +472,7 @@ for epoch in range(EPOCHS_START, EPOCHS):
         print(f'EARLY STOPPING! Patience: {patience}, and best val loss: {best_val_loss}')
         break 
     if optimizer.param_groups[0]['lr']<1e-8:
-        print(f'STOPPING! Learning rate below 1e-6')
+        print(f'STOPPING! Learning rate below 1e-8')
         break
         
     print(f'Patience: {p}, Best val_loss: {best_val_loss:.4f} , val_acc: {best_val_acc:.4f} at {best_val_epoch}')
