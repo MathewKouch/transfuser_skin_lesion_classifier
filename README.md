@@ -13,7 +13,7 @@ Inspired by https://arxiv.org/abs/2007.03047
 3. Induced decision tree built from the same prototypes for hierarchical decision making, and enables visual and explainable diagnosis. 
 Inspired by https://arxiv.org/abs/2004.00221
 
-## Output of Diagnosis
+## Diagnosis
 ![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_diagnosis.png)
 Model provides visual and explainable decision making, showing probabilities and decision paths for every probable skin lesion diagnosis. 
 Decision tree provides more meaningful diagnostic information than typical saliency map.
