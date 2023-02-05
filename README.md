@@ -3,7 +3,6 @@ Bi-modal cnn-transformer feature extractor with prototype decision tree classifi
 
 ## Architecture
 ![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_architecture.png)
-![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transformer.png)
 Model consists of:
 1. A Feature Extractor (FX) with two ResNet34 CNN branch for feature map extraction of clinical and dermoscopic images, and four vision based transformer encoders for richer feature and representations. 
 Inspired by https://arxiv.org/abs/2104.09224
@@ -18,3 +17,7 @@ Inspired by https://arxiv.org/abs/2004.00221
 ![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_diagnosis.png)
 Model provides visual and explainable decision making, showing probabilities and decision paths for every probable skin lesion diagnosis. 
 Decision tree provides more meaningful diagnostic information than typical saliency map.
+
+## Transformer 
+![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transformer.png)
+Cross modality features are generated via attention mechanism with transformer encoder, and injected back into the cnn.
