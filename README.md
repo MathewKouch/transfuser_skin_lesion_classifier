@@ -1,9 +1,8 @@
 # transfuser_skin_lesion_classifier
 Bi-modal cnn-transformer feature extractor with prototype decision tree classifier for accurate and explainable skin lesion diagnosis.
 
-![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_architecture.png)
 ## Architecture
-
+![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_architecture.png)
 Model consists of:
 1. A Feature Extractor (FX) with two ResNet34 CNN branch for feature map extraction of clinical and dermoscopic images, and four vision based transformer encoders for richer feature and representations. 
 Inspired by https://arxiv.org/abs/2104.09224
