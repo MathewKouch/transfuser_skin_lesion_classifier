@@ -1,11 +1,19 @@
 # transfuser_skin_lesion_classifier
-Bi-modal cnn-transformer feature extractor with prototype decision tree classifier
+Bi-modal cnn-transformer feature extractor with prototype decision tree classifier for accurate and explainable skin lesion diagnosis.
 
 ![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_architecture.png)
+## Architecture
 
-Model consists of two ResNet34 CNN branch for feature map extraction of clinical and dermoscopic images. 
-To extract and inject cross modality features, vision based transformer encoders are used thorughout four resolutions along the CNN branches.
-Feature fusion from both branches are concatenated and projected to a 512 dimensional representation to compare with skin lesion prototypes for classification.
+Model consists of:
+1. A Feature Extractor (FX) with two ResNet34 CNN branch for feature map extraction of clinical and dermoscopic images, and four vision based transformer encoders for richer feature and representations. 
+Inspired by https://arxiv.org/abs/2104.09224
 
+2. Prototypes of every skin lesion class (65) in the dataset, that are guided with class hierarchical information. Benefit of injecting hierarchy to training prototype is enabling model to make better mistakes where its represnetation vector is misclassified (closest to an incorrect prototype) but still relatively close or within the same higher hiercharchial level as the true class.
+Inspired by https://arxiv.org/abs/2007.03047
+
+3. Induced decision tree built from the same prototypes for hierarchical decision making, and enables visual and explainable diagnosis. 
+Inspired by https://arxiv.org/abs/2004.00221
+
+## Output of Diagnosis
 ![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_diagnosis.png)
-An induced decision tree is built from the concurrently trained prototypes and provides visual and better explainable diagnosis than saliency maps.
+Model provides visual and explainable decision making, showing probabilities and decision paths for every probable skin lesion diagnosis.
