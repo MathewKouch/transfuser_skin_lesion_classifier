@@ -15,8 +15,7 @@ Inspired by https://arxiv.org/abs/2004.00221
 
 ## Diagnosis
 ![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transfuser_diagnosis.png)
-Model provides visual and explainable decision making, showing probabilities and decision paths for every probable skin lesion diagnosis. 
-Decision tree provides more meaningful diagnostic information than typical saliency map.
+Decision tree (right) provides more meaningful diagnostic information than typical saliency map (left), visually explaining decision probabilities for every probable diagnosis. 
 
 ## Transformer 
 ![alt text](https://github.com/MathewKouch/transfuser_skin_lesion_classifier/blob/main/transformer.png)
